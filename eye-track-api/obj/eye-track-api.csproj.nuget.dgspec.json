@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api\\eye-track-api.csproj": {}
+    "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api\\eye-track-api.csproj": {
+    "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api\\eye-track-api.csproj",
+        "projectUniqueName": "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api.csproj",
         "projectName": "eye-track-api",
-        "projectPath": "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api\\eye-track-api.csproj",
+        "projectPath": "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api.csproj",
         "packagesPath": "C:\\Users\\ijaso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api\\obj\\",
+        "outputPath": "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,18 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.26, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"

@@ -32,6 +32,7 @@ namespace eye_track_api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "eye_track_api", Version = "v1" });
             });
+            services.AddControllers().AddNewtonsoftJson();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
