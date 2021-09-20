@@ -1,0 +1,150 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "eye_track_api",
+    "version": "v1"
+  },
+  "paths": {
+    "/Hello/get": {
+      "get": {
+        "tags": [
+          "Hello"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/Hello/external": {
+      "get": {
+        "tags": [
+          "Hello"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/Hello/database": {
+      "get": {
+        "tags": [
+          "Hello"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/TestGroup/get": {
+      "get": {
+        "tags": [
+          "TestGroup"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "type",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "identifier",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/TestGroup/post": {
+      "post": {
+        "tags": [
+          "TestGroup"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TestGroup"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "TestGroup": {
+      "type": "object",
+      "properties": {
+        "testId": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "dob": {
+          "type": "string"
+        },
+        "sex": {
+          "type": "string"
+        },
+        "disorderDisability": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
