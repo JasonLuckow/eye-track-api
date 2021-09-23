@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api.csproj": {}
+    "D:\\Eye-Tracker-Project\\eye-track-api\\eye-track-api\\eye-track-api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api.csproj": {
+    "D:\\Eye-Tracker-Project\\eye-track-api\\eye-track-api\\eye-track-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api.csproj",
+        "projectUniqueName": "D:\\Eye-Tracker-Project\\eye-track-api\\eye-track-api\\eye-track-api.csproj",
         "projectName": "eye-track-api",
-        "projectPath": "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api.csproj",
-        "packagesPath": "C:\\Users\\ijaso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\obj\\",
+        "projectPath": "D:\\Eye-Tracker-Project\\eye-track-api\\eye-track-api\\eye-track-api.csproj",
+        "packagesPath": "C:\\Users\\Kevin Le\\.nuget\\packages\\",
+        "outputPath": "D:\\Eye-Tracker-Project\\eye-track-api\\eye-track-api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ijaso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kevin Le\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +54,11 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[6.2.2, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
             }
           },
           "imports": [
@@ -78,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

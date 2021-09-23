@@ -35,7 +35,7 @@ namespace eye_track_api.Models
             LastName = lastName;
             DOB = dob;
             SEX = sex;
-            DisorderDisability = DisorderDisability;
+            DisorderDisability = disabilityDisorder;
 
         }
 
