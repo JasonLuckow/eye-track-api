@@ -20,7 +20,7 @@ namespace eye_track_api.Controllers
         [Route("get")]
         public string Get()
         {
-            return "returned GET";
+            return "returned Kevin";
         }
 
         //external
