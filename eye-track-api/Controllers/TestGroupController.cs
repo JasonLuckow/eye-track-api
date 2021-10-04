@@ -1,4 +1,5 @@
 ﻿using eye_track_api.Models;
+using eye_track_api.Utilities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
@@ -65,7 +66,7 @@ namespace eye_track_api.Controllers
 			using (MySqlConnection conn = new MySqlConnection(Helpers.GetRDSConnectionString()))
 			{
 				conn.Open();
-
+				
 				MySqlCommand command = new MySqlCommand(@"INSERT INTO `eye-tracker-schema`.`TestGroup` (FirstName, LastName, DOB, SEX, DisorderDisability) VALUES (@FirstName, @LastName, @DOB, @SEX, @DisorderDisability)", conn);
 				command.Parameters.AddWithValue("@FirstName", testGroup.FirstName);
 				command.Parameters.AddWithValue("@LastName", testGroup.LastName);
@@ -85,6 +86,30 @@ namespace eye_track_api.Controllers
 			return Ok();
 		}
 
+		[HttpPatch("patch/{id}")]
+		public IActionResult UpdateTestGroup([FromRoute] int id, [FromBody] Dictionary <string, string> patch)
+		{
+			string tableName = "TestGroup";
+			string columnName = "testID";
+
+			using (MySqlConnection conn = new MySqlConnection(Helpers.GetRDSConnectionString()))
+			{
+				conn.Open();
+
+				MySqlCommand command = QueryBuilder.UpdateBuilder(patch, tableName, columnName, id);
+				command.Connection = conn;
+				int rows = command.ExecuteNonQuery();
+
+				if (rows == 0)
+				{
+					return Problem("error creating");
+                }
+                else
+                {
+					return Ok();
+                }
+			}
+		}
 	}
 
 }
