@@ -118,6 +118,43 @@
           }
         }
       }
+    },
+    "/TestGroup/patch/{id}": {
+      "patch": {
+        "tags": [
+          "TestGroup"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
     }
   },
   "definitions": {
@@ -126,8 +163,7 @@
       "properties": {
         "testId": {
           "format": "int32",
-          "type": "integer",
-          "readOnly": true
+          "type": "integer"
         },
         "firstName": {
           "type": "string"
@@ -142,6 +178,12 @@
           "type": "string"
         },
         "disorderDisability": {
+          "type": "string"
+        },
+        "hand": {
+          "type": "string"
+        },
+        "glasses": {
           "type": "string"
         }
       }

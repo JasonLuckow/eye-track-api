@@ -28,7 +28,13 @@ namespace eye_track_api.Models
         [JsonProperty(PropertyName = "DisorderDisability")]
         public string DisorderDisability { get; set; }
 
-        public TestGroup(int testId, string firstName, string lastName, string dob, string sex, string disabilityDisorder)
+        [JsonProperty(PropertyName = "Hand")]
+        public string Hand { get; set; }
+
+        [JsonProperty(PropertyName = "Glasses")]
+        public string Glasses { get; set; }
+
+        public TestGroup(int testId, string firstName, string lastName, string dob, string sex, string disabilityDisorder, string hand, string glasses)
         {
             TestId = testId;
             FirstName = firstName;
@@ -36,6 +42,8 @@ namespace eye_track_api.Models
             DOB = dob;
             SEX = sex;
             DisorderDisability = disabilityDisorder;
+            Hand = hand;
+            Glasses = glasses;
 
         }
 
@@ -63,7 +71,9 @@ namespace eye_track_api.Models
                             reader.GetString(2),
                             reader.GetString(3),
                             reader.GetString(4),
-                            reader.GetString(5)
+                            reader.GetString(5),
+                            reader.GetString(6),
+                            reader.GetString(7)
                         );
                     }
                     else
