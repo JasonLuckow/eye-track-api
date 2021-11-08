@@ -1517,19 +1517,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kevin Le\\.nuget\\packages\\": {}
+    "C:\\Users\\ijaso\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Eye-Tracker-Project\\eye-track-api\\eye-track-api\\eye-track-api.csproj",
+      "projectUniqueName": "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api.csproj",
       "projectName": "eye-track-api",
-      "projectPath": "D:\\Eye-Tracker-Project\\eye-track-api\\eye-track-api\\eye-track-api.csproj",
-      "packagesPath": "C:\\Users\\Kevin Le\\.nuget\\packages\\",
-      "outputPath": "D:\\Eye-Tracker-Project\\eye-track-api\\eye-track-api\\obj\\",
+      "projectPath": "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\eye-track-api.csproj",
+      "packagesPath": "C:\\Users\\ijaso\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ijaso\\eye_tracking_repos\\eye-track-api\\eye-track-api\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Kevin Le\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ijaso\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1594,7 +1598,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
