@@ -3,6 +3,7 @@ using eye_track_api.Utilities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
+/*using MySqlConnector;*/
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -67,12 +68,14 @@ namespace eye_track_api.Controllers
 			{
 				conn.Open();
 				
-				MySqlCommand command = new MySqlCommand(@"INSERT INTO `eye-tracker-schema`.`TestGroup` (FirstName, LastName, DOB, SEX, DisorderDisability) VALUES (@FirstName, @LastName, @DOB, @SEX, @DisorderDisability)", conn);
+				MySqlCommand command = new MySqlCommand(@"INSERT INTO `eye-tracker-schema`.`TestGroup` (FirstName, LastName, DOB, SEX, DisorderDisability, Hand, Glasses) VALUES (@FirstName, @LastName, @DOB, @SEX, @DisorderDisability, @Hand, @Glasses)", conn);
 				command.Parameters.AddWithValue("@FirstName", testGroup.FirstName);
 				command.Parameters.AddWithValue("@LastName", testGroup.LastName);
 				command.Parameters.AddWithValue("@DOB", testGroup.DOB);
 				command.Parameters.AddWithValue("@SEX", testGroup.SEX);
 				command.Parameters.AddWithValue("@DisorderDisability", testGroup.DisorderDisability);
+				command.Parameters.AddWithValue("@Hand", testGroup.Hand);
+				command.Parameters.AddWithValue("@Glasses", testGroup.Glasses);
 
 				int rows = command.ExecuteNonQuery();
 
